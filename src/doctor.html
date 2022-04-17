@@ -12,7 +12,7 @@
     <title>MEDIBLOCK</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon.ico"/>
     <!-- <script src="js/bundle.js"></script> -->
     <!-- Custom CSS -->
@@ -100,14 +100,14 @@
         </div>
 
         
-        <div class="panel panel-default">
+          <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="text-center">Accessible EMRs</h3>
+                <h3 class="text-center">Accessible PHRs</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="alert alert-danger col-sm-8 col-sm-offset-2">
-                        <strong>Notice!</strong> Could not access records. Access might have been revoked. Contact admin or patient.
+                        <strong>Warning!</strong> Could not access records. Access might have been revoked. Contact Admin or Patient.
                     </div>
                 </div>
                 <div class="row">
@@ -123,17 +123,17 @@
                 </div>
             </div>
         </div>  
-    </div>
+    </div> 
 
 <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
+ <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/app.js"></script>
 <script src="/js/web3.min.js"></script>
 <script src="https://unpkg.com/ipfs-api/dist/index.min.js" crossorigin="anonymous"></script>
 <script>
-    var ipfs = window.IpfsApi('localhost', '5001')
+    var ipfs = window.IpfsApi('localhost','5001')
 
     const Buffer = window.IpfsApi().Buffer;
 
@@ -157,7 +157,8 @@
         $(".alert-danger").hide();
         
         key = web3.currentProvider.selectedAddress;
-        key = key.toLocaleLowerCase();
+        console.log(key);
+        key = key.toLowerCase();
 
         var a = 0;
         var b = 0;
@@ -261,7 +262,7 @@
                                                     </div>
                                                     <div class="col-sm-10">
                                                         <textarea class="form-control" rows="5" id="details" placeholder="Enter details to be added" name = "Details" style="width: inherit" required autofocus></textarea>
-                                                        <!-- <input type="text" class="form-control" id="details" placeholder="Enter details to be added" name = "Details" style="width: inherit" required autofocus> -->
+                                                         <input type="text" class="form-control" id="details" placeholder="Enter details to be added" name = "Details" style="width: inherit" required autofocus> 
                                                     </div>
                                                 </div>    
                                             </div>

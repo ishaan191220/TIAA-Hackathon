@@ -9,8 +9,14 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+
 body {
+   background-image: url(images/background.jpg);
+  height: 100vh;
+  background-size: cover;
   margin: 0;
+   
 }
 article,
 aside,

@@ -125,7 +125,7 @@
                             
                             <div class="text-center">
                                     <h5>Your records are stored here:http://localhost:8080/ipfs/<span id="recordsHash"></span></h5>
-                                <button type="submit" class="btn btn-info btn-lg" onclick="showRecords(this)">View medical records</button>
+                                <button type="submit" class="btn btn-info btn-lg" onclick="showRecords(this)">View Information</button>
                                 
                             </div>
                             <pre id="records" style="margin-top: 20px;">
@@ -138,7 +138,7 @@
                 </div>
             </div>
             
-            <div class="panel panel-default">
+             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="text-center">Share your Medical Record</h3>
                 </div>
@@ -168,12 +168,12 @@
             
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="text-center">Current EMR access holders</h3>
+                    <h3 class="text-center">Current PHR access holders</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="alert alert-danger col-sm-8 col-sm-offset-2">
-                            <strong>Notice!</strong> The access could not be revoked. Please retry or contact admin.
+                            <strong>Notice!</strong> The access could not be revoked. Please retry or contact Admin.
                         </div>
                     </div>
                     <div class="row">
@@ -190,7 +190,7 @@
 
                 </div>
             </div>           
-        </div>
+        </div> 
 
 <script src="js/jquery.js"></script>
 
@@ -198,6 +198,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="/js/web3.min.js"></script>
 <script src="js/app.js"></script>
+<script src="https://unpkg.com/ipfs-api/dist/index.min.js" crossorigin="anonymous"></script>
 
 <script>
 
@@ -354,12 +355,12 @@
 
             toggleRecordsButton +=1
 
-            element.innerHTML = "Hide Medical Records";
+            element.innerHTML = "Hide Records";
             element.className = "btn btn-info btn-lg";
         } else{
             $("#records").hide();
             toggleRecordsButton -=1;
-            element.innerHTML = "View Medical Records";
+            element.innerHTML = "View Records";
             element.className = "btn btn-info btn-lg"
         }
         

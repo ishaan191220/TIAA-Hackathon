@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "solc": "^0.4.24",
-    "web3": "^0.20.0"
+    "web3": "^0.20.0",
+    "truffle": "5.0.5"
   },
   "devDependencies": {
     "lite-server": "^2.3.0"
